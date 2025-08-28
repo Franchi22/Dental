@@ -1,0 +1,25 @@
+<Page x:Class="DentalMVP.Pages.PacientesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Pacientes">
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="8">
+            <TextBox x:Name="txtNombre" Width="220" Margin="4"/>
+            <TextBox x:Name="txtTel" Width="140" Margin="4"/>
+            <TextBox x:Name="txtEmail" Width="200" Margin="4"/>
+            <Button Content="Agregar" Click="Add_Click" Margin="4"/>
+            <Button Content="Guardar Cambios" Click="Save_Click" Margin="4"/>
+        </StackPanel>
+
+        <DataGrid x:Name="dg" AutoGenerateColumns="False" Margin="8" IsReadOnly="False"
+                  CanUserAddRows="False" CanUserDeleteRows="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" IsReadOnly="True" Width="60"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding FullName}" Width="*"/>
+                <DataGridTextColumn Header="Teléfono" Binding="{Binding Phone}" Width="140"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="200"/>
+                <DataGridTextColumn Header="ARS" Binding="{Binding Ars}" Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Page>

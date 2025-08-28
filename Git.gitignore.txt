@@ -1,0 +1,15 @@
+@'
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userprefs
+*.log
+*.publish.xml
+*.cache/
+*.db
+*.sqlite
+*.sqlite3
+**/Properties/launchSettings.json
+'@ | Set-Content .gitignore -Encoding utf8

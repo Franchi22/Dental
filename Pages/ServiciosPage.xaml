@@ -1,0 +1,34 @@
+﻿<Page x:Class="DentalMVP.Pages.ServiciosPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Servicios">
+
+  <Grid Margin="16">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+      <TextBlock Text="Nombre:" VerticalAlignment="Center" Margin="0,0,6,0"/>
+      <TextBox x:Name="txtNombre" Width="180" Margin="0,0,12,0"/>
+
+      <TextBlock Text="Precio:" VerticalAlignment="Center" Margin="0,0,6,0"/>
+      <TextBox x:Name="txtPrecio" Width="100" Margin="0,0,12,0"/>
+
+      <TextBlock Text="ITBIS:" VerticalAlignment="Center" Margin="0,0,6,0"/>
+      <ComboBox x:Name="cbItbis" Width="80" SelectedIndex="0" Margin="0,0,12,0">
+        <ComboBoxItem Content="0"/>
+        <ComboBoxItem Content="18"/>
+      </ComboBox>
+
+      <Button Content="Agregar" Click="Add_Click" Padding="8,4" Margin="0,0,8,0"/>
+      <Button Content="Guardar cambios" Click="Save_Click" Padding="8,4"/>
+    </StackPanel>
+
+    <DataGrid x:Name="dg"
+              Grid.Row="1"
+              AutoGenerateColumns="True"
+              CanUserAddRows="False"/>
+  </Grid>
+</Page>

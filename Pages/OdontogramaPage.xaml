@@ -1,0 +1,15 @@
+<Page x:Class="DentalMVP.Pages.OdontogramaPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Odontograma">
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="8">
+            <ComboBox x:Name="cbPaciente" Width="260" Margin="4" DisplayMemberPath="FullName" SelectedValuePath="Id"/>
+            <Button Content="Guardar Estados" Click="Save_Click" Margin="4"/>
+        </StackPanel>
+
+        <ScrollViewer>
+            <UniformGrid x:Name="grid" Columns="8" Margin="8"/>
+        </ScrollViewer>
+    </DockPanel>
+</Page>
